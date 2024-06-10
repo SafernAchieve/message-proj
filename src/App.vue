@@ -79,17 +79,19 @@
     <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto px-0">
-            <div id="sidebar" class="collapse collapse-horizontal show border-end">
+            <div id="sidebar" class="collapse collapse-horizontal show border-end sidebar-bg {
+  background-color: #f0f0f0; /* Set your desired background color here */
+}">
                 <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-bootstrap"></i> <span>Item</span> </a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-film"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-heart"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-bricks"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-clock"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-archive"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-gear"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-calendar"></i> <span>Item</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-envelope"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg " data-bs-parent="#sidebar"><i class="bi bi-bootstrap"></i> <span>Item</span> </a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-film"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-heart"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-bricks"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-clock"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-archive"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-gear"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-calendar"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-envelope"></i> <span>Item</span></a>
                 </div>
             </div>
         </div>
@@ -155,5 +157,8 @@ background-color: #e1c289;
 }
 .formbg{
   background-color: rgb(241, 237, 221);
+}
+.sidebar-bg {
+  background-color: #dec28f; /* Set your desired background color here */
 }
 </style>
