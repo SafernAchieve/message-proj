@@ -24,8 +24,9 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">               
                 <li><router-link to="/ViewMessage" class="dropdown-item">View Message</router-link></li>
-                <li><router-link to="/createmessage" class="dropdown-item">Create Message</router-link></li>
-                
+                <Transition name="fade">
+                    <router-link to="/createmessage" class="dropdown-item">Create Message</router-link>
+                  </Transition>
               </ul>
             </li>
 
@@ -83,7 +84,7 @@
   background-color: #f0f0f0; /* Set your desired background color here */
 }">
                 <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg " data-bs-parent="#sidebar"><i class="bi bi-bootstrap"></i> <span>Item</span> </a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" @click="handleDoubleClick('Item1')"  data-bs-parent="#sidebar"><i class="bi bi-envelope"></i> <span>Item</span> </a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-film"></i> <span>Item</span></a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-heart"></i> <span>Item</span></a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-bricks"></i> <span>Item</span></a>
@@ -103,8 +104,9 @@
                 <div class="col-12">
 
 
-
+              <transition name="fade">
                   <router-view/>
+                </transition>
 
 
 
@@ -141,16 +143,35 @@
 
 <script>
 export default {
+  data() {
+    return {
+      show: false,
+    };
+  },
   methods: {
     viewMessage(message) {
-      console.log('Message:', message);
+    
       this.$router.push({ path: '/about' });
-    }
+    },
+    handleDoubleClick(item) {
+      this.$router.push({ path: '/ViewMessage' });
+      // Perform your desired action here
+    },
   }
 };
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.9s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .navcolor{
 background-color: #e1c289;
 
@@ -160,5 +181,11 @@ background-color: #e1c289;
 }
 .sidebar-bg {
   background-color: #dec28f; /* Set your desired background color here */
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>

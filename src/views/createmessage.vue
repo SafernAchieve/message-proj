@@ -59,7 +59,7 @@
   
             <div class="col-12">
               <label for="Subject">Message Subject:</label><br />
-      <input type="text" id="Subject" class="form-control fields" value="Evolv Psycotherapy Test Notification">
+      <input type="text" id="Subject" class="form-control fields" value="Evolv Psychotherapy Test Notification">
             </div>
   
             <div class="col-12">
