@@ -68,7 +68,7 @@
   
             <div class="col-12">
               <label for="exampleFormControlTextarea1" class="form-label">Message Body</label>
-                <textarea class="form-control fields" id="exampleFormControlTextarea1" rows="8"></textarea>
+                <textarea class="form-control fields" :value="message" id="exampleFormControlTextarea1" rows="8"></textarea>
             </div>
   
           
