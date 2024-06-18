@@ -64,13 +64,12 @@
               <div v-for="(email, index) in emails" :key="index">
                 <input type="email" class="form-control fields input-field" v-model="emails[index]" placeholder="name@example.com" multiple>  
               </div>
+              <button type="button" class=" button-style"  @click="addEmailField">+</button>
+              <button type="button" class=" button-style"  @click="deleteEmailField(index)">-</button>
             </div>
 
 
 
-            <div class="col-12">
-              <button type="button" class="btn btn-add-input" @click="addEmailField">Add email</button>
-            </div>
             <div class="col-12">
               <label for="Subject">Message Subject:</label><br />
               <input type="text" id="Subject" class="form-control fields" value="Evolv Psychotherapy Test Notification">
@@ -103,6 +102,10 @@ export default {
     addEmailField() {
       this.emails.push('');
       this.names.push('');
+    },
+    deleteEmailField(index) {
+      this.emails.splice(index, 1);
+      this.names.splice(index, 1);
     }
   }
 }
