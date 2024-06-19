@@ -38,14 +38,35 @@
                 <option value="2">False</option>
               </select>
             </div>
+
             <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control fields" id="exampleFormControlInput1" placeholder="name@example.com" multiple>
+              <label for="exampleFormControlInput1" class="form-label">Conditions</label>
+              <input type="text" class="form-control fields" id="exampleFormControlInput1" placeholder="Enter Condition" multiple>
             </div>
+
+
+
+
+            <div class="col-md-6">    
+            </div>
+
+
+
+            <div class="col-md-6">
+          
+              <div v-for="(condition, index) in conditions" :key="index">
+                <input type="text" class="form-control fields input-field" id="exampleFormControlInput1" placeholder="Enter Condition" multiple> 
+              </div>
+              <button type="button" class=" button-style"  @click="addConditions">+</button>
+              <button type="button" class=" button-style"  @click="deleteConditions(index)">-</button>
+            </div>
+
+            
             <div class="col-md-6">
               <label for="exampleFormControlInput1" class="form-label">Name</label>
-              <input type="email" class="form-control fields" id="exampleFormControlInput1" placeholder="example name" multiple>
+              <input type="text" class="form-control fields" id="exampleFormControlInput1" placeholder="example name" multiple>
             </div>
+
             <div class="col-md-6">
               <label for="exampleFormControlInput1" class="form-label">Email address</label>
               <input type="email" class="form-control fields" id="exampleFormControlInput1" placeholder="name@example.com" multiple>
@@ -96,6 +117,7 @@ export default {
     return {
       emails: [],
       names: [],
+      conditions:[],
     };
   },
   methods: {
@@ -106,12 +128,19 @@ export default {
     deleteEmailField(index) {
       this.emails.splice(index, 1);
       this.names.splice(index, 1);
-    }
+    },
+    addConditions() {
+      this.conditions.push('');
+      },
+      deleteConditions(index) {
+      this.conditions.splice(index, 1);
+      
+    },
   }
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   max-width: 800px; /* Adjust the max-width as needed */
 }
@@ -121,17 +150,24 @@ export default {
 .fields {
   background-color: rgb(241, 237, 221);
 }
+
 .input-field {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
+
 .btn-add-input {
   background-color: rgb(127, 187, 255);
   border: none;
   padding: 8px 12px;
   margin-top: 10px;
+}
+.button-style{
+
+margin-left: 9px;
+background-color: darkgray;
 }
 </style>
