@@ -168,6 +168,6 @@ export default {
 .button-style{
 
 margin-left: 9px;
-background-color: darkgray;
+background-color: rgb(228, 217, 179);
 }
 </style>
