@@ -14,6 +14,24 @@
                 <option value="2">Evolv Psycotherapy Test Notification</option>
               </select>
             </div>
+
+
+   
+
+
+
+
+
+        
+            
+
+
+
+
+
+
+
+
             <div class="col-md-6">
               <label for="exampleFormControlTextarea1" class="form-label">Notification Desc:</label><br/>
               <select class="form-select fields" id="formSelectSm" aria-label=".form-select-sm example">
@@ -22,6 +40,7 @@
                 <option value="2">Evolv Psycotherapy Test Notification</option>
               </select>
             </div>
+
             <div class="col-md-6">
               <label for="exampleFormControlTextarea1" class="form-label">Event Name:</label><br/>
               <select class="form-select fields" id="formSelectSm" aria-label=".form-select-sm example">
@@ -38,7 +57,8 @@
                 <option value="2">False</option>
               </select>
             </div>
-
+          
+            
             <div class="col-md-6">
               <label for="exampleFormControlInput1" class="form-label">Conditions</label>
               <input type="text" class="form-control fields" id="exampleFormControlInput1" placeholder="Enter Condition" multiple>
@@ -48,20 +68,32 @@
 
 
             <div class="col-md-6">    
+            
             </div>
 
+          
+       
 
 
-            <div class="col-md-6">
+
+
+            <!-- <div class="col-md-6">
           
               <div v-for="(condition, index) in conditions" :key="index">
                 <input type="text" class="form-control fields input-field" id="exampleFormControlInput1" placeholder="Enter Condition" multiple> 
               </div>
               <button type="button" class=" button-style"  @click="addConditions">+</button>
               <button type="button" class=" button-style"  @click="deleteConditions(index)">-</button>
-            </div>
+            </div> -->
 
             
+            <addEmail/>
+
+
+
+
+
+<!-- 
             <div class="col-md-6">
               <label for="exampleFormControlInput1" class="form-label">Name</label>
               <input type="text" class="form-control fields" id="exampleFormControlInput1" placeholder="example name" multiple>
@@ -70,8 +102,8 @@
             <div class="col-md-6">
               <label for="exampleFormControlInput1" class="form-label">Email address</label>
               <input type="email" class="form-control fields" id="exampleFormControlInput1" placeholder="name@example.com" multiple>
-            </div>
-
+            </div> -->
+<!-- 
             
             <div class="col-md-6">
               <div v-for="(name, index) in names" :key="index">
@@ -88,7 +120,7 @@
               <button type="button" class=" button-style"  @click="addEmailField">+</button>
               <button type="button" class=" button-style"  @click="deleteEmailField(index)">-</button>
             </div>
-
+ -->
 
 
             <div class="col-12">
@@ -112,7 +144,13 @@
 </template>
 
 <script>
+import addEmail from './addEmail.vue'
+
 export default {
+  name: 'createmessage',
+  components:{
+    addEmail
+  },
   data() {
     return {
       emails: [],
