@@ -86,9 +86,14 @@
               <button type="button" class=" button-style"  @click="deleteConditions(index)">-</button>
             </div> -->
 
-            
-            <addEmail/>
-
+            <div class="row">
+              <div class="col-md-6">
+                <conditions/>
+              </div>
+              <div class="col-md-6">
+                <addEmail/>
+              </div>
+            </div>
 
 
 
@@ -145,11 +150,13 @@
 
 <script>
 import addEmail from './addEmail.vue'
+import Conditions from './Conditions.vue'
 
 export default {
   name: 'createmessage',
   components:{
-    addEmail
+    addEmail,
+    Conditions
   },
   data() {
     return {
@@ -174,13 +181,14 @@ export default {
       this.conditions.splice(index, 1);
       
     },
+  
   }
 }
 </script>
 
 <style scoped>
 .container {
-  max-width: 800px; /* Adjust the max-width as needed */
+  max-width: 1000px; /* Adjust the max-width as needed */
 }
 .FormColor {
   background-color: burlywood;
