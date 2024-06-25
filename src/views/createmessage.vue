@@ -82,7 +82,7 @@
               <button type="button" class=" button-style"  @click="addConditions">+</button>
               <button type="button" class=" button-style"  @click="deleteConditions(index)">-</button>
             </div> -->
-
+            <hr class="hr hr-blurry" />
             <div class="row Component-style">
               <div class="col-md-6">
                 <conditions/>
@@ -92,7 +92,7 @@
               </div>
             </div>
 
-
+            <hr class="hr hr-blurry" />
 
 
 <!-- 
@@ -214,6 +214,6 @@ margin-left: 9px;
 background-color: rgb(228, 217, 179);
 }
 .Component-style{
-  margin-top: 45px;
+  margin-top: 35px;
 }
 </style>

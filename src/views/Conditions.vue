@@ -1,6 +1,6 @@
 <template>
     <div>
-      <table class="table table-bordered border-primary-sm">
+      <table class="table table-bordered border-primarysm">
         <thead>
           <tr>
             <th scope="col">#</th>
