@@ -5,6 +5,7 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Condition</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -15,11 +16,16 @@
             </td>
           
           
+            <td>
+       
+        <button type="button" @click.prevent="deleteRow(index)" class="btn btn-danger">Delete</button>
+      </td>
+
           </tr>
         </tbody>
       </table>
-      <button @click.prevent="addRow" class="">Add</button>
-      <button @click.prevent="deleteRow" class="">Delete</button>
+      <button type="button" @click.prevent="addRow" class="btn btn-primary">Add</button>
+ 
     </div>
   </template>
   

@@ -188,7 +188,7 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 1000px; /* Adjust the max-width as needed */
+  max-width: 1200px; /* Adjust the max-width as needed */
 }
 .FormColor {
   background-color: burlywood;

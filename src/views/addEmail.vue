@@ -6,6 +6,7 @@
           <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Email</th>
+          <th scope="col">Action</th>
         
         </tr>
       </thead>
@@ -18,12 +19,15 @@
           <td>
             <input v-model="user.email" type="email" class="form-control" />
           </td>
+          <td>
        
+       <button type="button" @click.prevent="deleteEmailField(index)" class="btn btn-danger">Delete</button>
+     </td>
         </tr>
       </tbody>
     </table>
-    <button @click.prevent="addRow" class="">Add</button>
-    <button @click.prevent="deleteEmailField" class="">Delete</button>
+
+    <button type="button" @click.prevent="addRow" class="btn btn-primary">Add</button>
   </div>
 </template>
 

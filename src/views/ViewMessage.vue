@@ -24,7 +24,7 @@
     methods: {
       viewMessage(item) {
         console.log('Item:', item);
-        router.push({ path: '/about', query: { message: item } });
+        router.push({ path: '/createmessage', query: { message: item } });
       }
     },
     data() {
