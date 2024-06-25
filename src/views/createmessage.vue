@@ -59,10 +59,7 @@
             </div>
           
             
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Conditions</label>
-              <input type="text" class="form-control fields" id="exampleFormControlInput1" placeholder="Enter Condition" multiple>
-            </div>
+          
 
 
 
@@ -86,7 +83,7 @@
               <button type="button" class=" button-style"  @click="deleteConditions(index)">-</button>
             </div> -->
 
-            <div class="row">
+            <div class="row Component-style">
               <div class="col-md-6">
                 <conditions/>
               </div>
@@ -215,5 +212,8 @@ export default {
 
 margin-left: 9px;
 background-color: rgb(228, 217, 179);
+}
+.Component-style{
+  margin-top: 45px;
 }
 </style>

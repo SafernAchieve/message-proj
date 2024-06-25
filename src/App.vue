@@ -84,8 +84,8 @@
   background-color: #f0f0f0; /* Set your desired background color here */
 }">
                 <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" @click="handleDoubleClick('Item1')"  data-bs-parent="#sidebar"><i class="bi bi-envelope"></i> <span>Item</span> </a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-film"></i> <span>Item</span></a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" @click="viewMessage('Item1')"  data-bs-parent="#sidebar"><i class="bi bi-envelope"></i> <span>View message</span> </a>
+                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" @click="createMessage('Item2')"  data-bs-parent="#sidebar"><i class="bi bi-envelope"></i> <span>Create message</span> </a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-heart"></i> <span>Item</span></a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-bricks"></i> <span>Item</span></a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate sidebar-bg" data-bs-parent="#sidebar"><i class="bi bi-clock"></i> <span>Item</span></a>
@@ -153,8 +153,12 @@ export default {
     
       this.$router.push({ path: '/about' });
     },
-    handleDoubleClick(item) {
+    viewMessage(item) {
       this.$router.push({ path: '/ViewMessage' });
+      // Perform your desired action here
+    },
+    createMessage(item) {
+      this.$router.push({ path: '/createmessage' });
       // Perform your desired action here
     },
   }
