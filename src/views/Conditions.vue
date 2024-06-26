@@ -17,14 +17,14 @@
           
           
             <td>
-       
-        <button type="button" @click.prevent="deleteRow(index)" class="btn btn-danger">Delete</button>
+                <button type="button" @click.prevent="addRow(index)"  class=" btn btn-outline-success me-2 bi bi-plus-square-fill"></button>
+        <button type="button" @click.prevent="deleteRow(index)" class=" btn btn-outline-danger bi bi-trash"></button>
       </td>
 
           </tr>
         </tbody>
       </table>
-      <button type="button" @click.prevent="addRow" class="btn btn-primary">Add</button>
+    
  
     </div>
   </template>
@@ -41,8 +41,8 @@
       };
     },
     methods: {
-      addRow() {
-        this.conditions.push({ name: '', email: '' });
+      addRow(index) {
+        this.conditions.splice(index + 1, 0, { name: '', email: '' });
       },
       deleteRow(index) {
         this.conditions.splice(index, 1);

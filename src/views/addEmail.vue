@@ -7,7 +7,6 @@
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Action</th>
-        
         </tr>
       </thead>
       <tbody>
@@ -19,15 +18,13 @@
           <td>
             <input v-model="user.email" type="email" class="form-control" />
           </td>
-          <td>
-       
-       <button type="button" @click.prevent="deleteEmailField(index)" class="btn btn-danger">Delete</button>
-     </td>
+          <td class="d-flex">
+            <button type="button" @click.prevent="addRow(index)" class="btn btn-outline-success me-2 bi bi-plus-square-fill"></button>
+            <button type="button" @click.prevent="deleteEmailField(index)" class="btn btn-outline-danger bi bi-trash"></button>
+          </td>
         </tr>
       </tbody>
     </table>
-
-    <button type="button" @click.prevent="addRow" class="btn btn-primary">Add</button>
   </div>
 </template>
 
@@ -43,8 +40,8 @@ export default {
     };
   },
   methods: {
-    addRow() {
-      this.users.push({ name: '', email: '' });
+    addRow(index) {
+      this.users.splice(index + 1, 0, { name: '', email: '' });
     },
     deleteEmailField(index) {
       this.users.splice(index, 1);

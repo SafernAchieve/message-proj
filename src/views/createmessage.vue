@@ -164,8 +164,9 @@ export default {
   },
   methods: {
     addEmailField() {
-      this.emails.push('');
-      this.names.push('');
+    
+      this.emails.splice(index + 1, 0, '');
+      this.names.splice(index + 1, 0, '');
     },
     deleteEmailField(index) {
       this.emails.splice(index, 1);
@@ -185,10 +186,12 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 1200px; /* Adjust the max-width as needed */
+  max-width: 1100px; /* Adjust the max-width as needed */
 }
 .FormColor {
-  background-color: burlywood;
+  background-color: #deb887;
+  color: #3A2F2F;
+    
 }
 .fields {
   background-color: rgb(241, 237, 221);
