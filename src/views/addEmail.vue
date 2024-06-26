@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table class="table table-bordered border-primarysm">
+    <table class="table table-bordered table-sm"> <!-- Adjusted class to table-sm for smaller size -->
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -51,5 +51,8 @@ export default {
 </script>
 
 <style scoped>
-/* Add your styles here */
+/* Adjusted style for more compact container */
+.table {
+  margin-bottom: 0; /* Remove default margin */
+}
 </style>

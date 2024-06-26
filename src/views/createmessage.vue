@@ -185,6 +185,9 @@ export default {
 </script>
 
 <style scoped>
+.container:hover{
+ 
+}
 .container {
   max-width: 1100px; /* Adjust the max-width as needed */
 }
@@ -195,6 +198,9 @@ export default {
 }
 .fields {
   background-color: rgb(241, 237, 221);
+}
+.fields:hover {
+  background-color: #e2dfb8;
 }
 
 .input-field {
@@ -218,5 +224,6 @@ background-color: rgb(228, 217, 179);
 }
 .Component-style{
   margin-top: 35px;
+  border-radius: ;
 }
 </style>
