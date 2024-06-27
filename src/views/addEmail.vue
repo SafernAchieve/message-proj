@@ -11,14 +11,14 @@
       </thead>
       <tbody>
         <tr v-for="(user, index) in users" :key="index">
-          <th scope="row">{{ index + 1 }}</th>
+          <th scope="row" class="">{{ index + 1 }}</th>
           <td>
-            <input v-model="user.name" type="text" class="form-control" />
+            <input v-model="user.name" type="text" class="form-control field-style" />
           </td>
           <td>
-            <input v-model="user.email" type="email" class="form-control" />
+            <input v-model="user.email" type="email" class="form-control field-style" />
           </td>
-          <td class="d-flex">
+          <td class="d-flex ">
             <button type="button" @click.prevent="addRow(index)" class="btn btn-outline-success me-2 bi bi-plus-square-fill"></button>
             <button type="button" @click.prevent="deleteEmailField(index)" class="btn btn-outline-danger bi bi-trash"></button>
           </td>
@@ -54,5 +54,11 @@ export default {
 /* Adjusted style for more compact container */
 .table {
   margin-bottom: 0; /* Remove default margin */
+}
+.field-style{
+  background-color: rgb(241, 237, 221);
+}
+.field-style:hover{
+  background-color: #e2dfb8;;
 }
 </style>
