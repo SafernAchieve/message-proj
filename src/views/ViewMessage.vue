@@ -41,7 +41,7 @@
               </thead>
               <tbody>
                 <tr v-for="contact in contacts" :key="contact.id">
-                  <td class="ps-4">
+                  <td class="ps-4 item-hover">
                     <div class="form-check font-size-16">
                       <input
                         type="checkbox"
@@ -51,10 +51,10 @@
                       <label :for="'contact-check-' + contact.id" class="form-check-label"></label>
                     </div>
                   </td>
-                  <td>
+                  <td class="item-hover">
                     <a>{{ contact.name }}</a>
                   </td>
-                  <td>
+                  <td class="item-hover">
                     <a>{{ contact.message }}</a>
                   </td>
                   <td>
@@ -66,7 +66,7 @@
                         <a href="javascript:void(0);" @click="viewMessage(contact.message)" data-bs-toggle="tooltip" data-bs-placement="top" title="View" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
                       </li>
                       <li class="list-inline-item">
-                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
+                        <a href="javascript:void(0);" @click="deleteEmailField(index)" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
                       </li>
                     </ul>
                   </td>
@@ -110,6 +110,9 @@ export default {
     viewMessage(message) {
       console.log('Message:', message);
       router.push({ path: '/createmessage', query: { message } });
+    },
+    deleteEmailField(index) {
+      this.contacts.splice(index, 1);
     }
   },
   
@@ -194,5 +197,8 @@ a {
 }
 .pagination {
   justify-content: flex-start; /* Align pagination links to the left */
+}
+.item-hover:hover{
+  background-color: #e0e0e0;
 }
 </style>

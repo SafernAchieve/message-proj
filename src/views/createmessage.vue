@@ -107,11 +107,11 @@ export default {
   max-width: 1100px; /* Adjust the max-width as needed */
 }
 .FormColor {
-  background-color: #deb887;
-  color: #3A2F2F;
+  background-color: #ECF0F1;
+  color: #F2EEE8;
 }
 .fields {
-  background-color: rgb(241, 237, 221);
+  background-color: rgb(186, 182, 182);
 }
 .fields:hover {
   background-color: #e2dfb8;
@@ -148,6 +148,7 @@ export default {
   font-weight: bold;
   font-size: 14px;
   font-style: italic;
+  color:#212121
 }
 .message-text-style{
   font-size: 16px;
